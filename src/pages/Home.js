@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 function Home() {
   return (
-    <div>
+    <div className='header'>
       <h1>Welcome to My Portfolio</h1>
       <p>This is the home page.</p>
     </div>

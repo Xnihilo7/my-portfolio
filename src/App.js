@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Header from './components/Header'; // Import Header component
+
 import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="App">
+      <div className="main">
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
@@ -17,14 +18,19 @@ function App() {
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+       
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
 
-        <Hero /> {/* Use Header component */}
+          <div id='bod'>
+            <h1>Hello World</h1>
+          </div>
+        </div>
       </div>
+        
     </Router>
   );
 }
