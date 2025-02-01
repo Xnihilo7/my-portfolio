@@ -1,63 +1,531 @@
+/*Fonts quite obviously*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
-
+/*Global Styles*/
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: black; /* Set the background to black */
-  color: white; /* Optional: change text color to white for contrast */
-  font-family: Arial, sans-serif;
+  background-color: #141414; 
+  color: #e1e2e4; 
+  font-family: sans-serif;
 }
 
-.App {
+* {
+  cursor: none;
+}
+
+:root {
+  --white-main: #e1e2e4;
+  --black-main: #141414;
+  --hover: #a3a3a3be;
+  --hover-2: #3a3a3a4e;
+  --font-apple: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-code: "Source Code Pro", serif;
+}
+
+h1 {
+  font-family: var(--font-apple);
+  font-weight: 700;
+  font-size: 45px;
+}
+h2 {
+  font-family: var(--font-apple);
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 2;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+h3 {
+  font-family: var(--font-code);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1;
+}
+p {
+  font-family: var(--font-code);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.fakeComment {
+  font-family: var(--font-code);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1;
+}
+
+/*Nav styles eh*/
+.navbar {
+  display: flex;
   justify-content: space-between;
-  min-height: 100%; /* Ensure the App takes up the full height */
-  width: 100%; /* Make sure it takes up the full width */
-  background-image: url("../src/pages/components/images/background-1.webp");
-  background-size: cover;
+  align-items: center;
+  background-color: var(--white-main);
+  padding: 0.5rem 1rem;
+  color: #141414;
+  border-radius: 40px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 5;
+  height: 70px;
+  max-width: 1220px;
 }
-
-.main {
-  width: 100%;
-  margin: 0 auto;
-  background-color: #515050;
-  height: 1000px;
+.logo {
+  font-family: var(--font-apple);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #141414;
+  margin-left: 16px;
 }
-@media (min-width: 768px) {
-  .main {
-    
-  }
+.logo .show2{
+  display: none;
+  font-size: 30px;
 }
-
-
-nav {
-  background: #333;
-  color: white;
-  padding: 1rem;
-  width: 100%;
+.logo .show1{
+  display: inline;
+  font-size: 34px;
 }
-
+.logo:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #141414;
+  padding: 0;
+}
 nav ul {
+  font-family: var(--font-code);
   list-style: none;
   display: flex;
   justify-content: space-around;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+  position: relative;
+  right: 0%;
 }
-
 nav a {
-  color: white;
+  color: #141414;
   text-decoration: none;
 }
-
 nav a:hover {
   text-decoration: underline;
+  background-color: #141414;
+  color: #e1e2e4;
+  transition: .5s;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+/* Burger Icon */
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  z-index: 10;
+}
+.line {
+  width: 28px;
+  height: 4px;
+  background-color: #141414;
+  transition: all 0.3s ease;
+  margin-right: 12px;
+}
+.line.open:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.line.open:nth-child(2) {
+  opacity: 0;
+}
+.line.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #141414;
 }
 
-div {
-  padding: 2rem;
+.nav-links a:hover {
+  text-decoration: none;
+  background-color: #141414;
 }
+/* Responsive Menu */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  padding-top: 9px;
+  top: 2px;
+  right: 0rem;
+  background-color: #e1e2e4;
+  border-radius: 25px;
+  padding: 3rem 1rem 1rem;
+}
+.nav-links.show {
+  display: flex;
+}
+.nav-links li {
+  margin: 0.5rem 0;
+}
+.nav-links .logoIn {
+  width: 32px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #141414;
+
+}
+.nav-links .logoGit {
+  width: 40px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #e1e2e4;
+  
+}
+
+@media (min-width:768px) {
+  .main {
+    max-width: 1280px;
+  }
+  nav ul {
+    right: -35%;
+  }
+  .logo .show2{
+    display: inline;
+  }
+  .logo .show1{
+    display: none;
+  }
+}
+
+/*App.js styles*/
+.App {
+  position: relative;
+}
+
+/*Home.js styles*/
+/* Home */
+
+.home {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.home .hero{
+  width: 100%;
+  padding: 100px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.home .hero .background img{
+  width: 100%;
+}
+.home .hero .background {
+  width: 100%;
+  height: 100%;
+}
+.home .hero .txt {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .hero .txt h1 {
+  font-size: clamp(2.813rem, 1.667rem + 5.729vw, 6.25rem);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 10px;
+  color: var(--white-main);
+  display: inline-block;
+  position: relative; /* Needed for overlay */
+  overflow: hidden; /* Hides overflow of sliding effect */
+}
+
+/* Pseudo-element for sliding mask */
+.home .hero .txt h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%; /* Start off-screen */
+  width: 300%; /* Covers entire text */
+  height: 100%;
+  background: var(--black-main); /* Covers the text initially */
+  transform: skewX(-135deg); /* Creates slanted effect */
+  animation: reveal-slide 3s ease-in-out forwards;
+  animation-delay: 0s; /* 2-second delay before animation starts */
+}
+
+@keyframes reveal-slide {
+  0% {
+    left: -150%; /* Starts way off-screen */
+  }
+  100% {
+    left: 150%; /* Slides completely off, revealing text */
+  }
+}
+
+.home .hero .resumeSpot{
+  width: 100px;
+  height: 300px;
+  border: 2px solid var(--white-main);
+  position: relative;
+  color: var(--white-main);
+}
+.home .hero .resumeSpot:hover{
+  background-color: var(--white-main);
+  color: var(--black-main);
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+.home .hero .resumeSpot .resumeSpotContent{
+  width: 300px;
+  height: 100px;
+  text-align: left;
+  transform: rotate(270deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 34%;
+  right: -106%;
+}
+.home .hero .resumeSpot .resumeTxt{
+  font-family: var(--font-code);
+  font-weight: 400;
+  font-size: 18px;
+}
+.home .hero .resumeSpot .downLoad{
+  width: 45px;
+  height: 100%;
+  position: relative;
+  top: 0;
+  right: -4%;
+
+}
+.home .hero .resumeSpot .downLoad img{
+  width: 100%;
+}
+
+.home .hero .resumeSpot svg path{
+  fill: var(--white-main);
+}
+.home .hero .resumeSpot:hover svg path{
+  fill: var(--black-main);
+  transition: fill 250ms ease-in-out;
+}
+@media (min-width: 768px) {
+  .home {
+    max-width: 1280px;
+  }
+  .home .hero .txt{
+    margin: 0 30px;
+  }
+  .home .hero .txt h1 {
+    font-size: clamp(5.75rem, 2rem + 7.813vw, 8.25rem);
+  } 
+
+}
+
+.home .body{
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.home .body .bodTxt{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 10% 3% 0;
+}
+
+.home .body .bodTxt p{
+  width: 88%;
+}
+
+.home #skills{
+  width: 100%;
+  margin: 2em auto;
+}
+.home #skills .skillsGrid{
+  display: flex;    
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.home #skills .skillsGrid .item{
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 2px;
+  text-align: right;
+  font-family: var(--font-apple);
+  color: var(--hover);
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 1;
+  transition: background-color 2s ease, transform 0.5s ease;
+  white-space: nowrap;
+}
+.home #skills .skillsGrid .item:hover{
+  color: var(--white-main);
+  transform: scale(1.01);
+}
+
+
+.home #work{
+  width: 100%;
+  margin: 2em auto;
+}
+.home #work .workList{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home #work .workList .item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--white-main);
+  height: 90px;
+  padding: 0 10px;
+  transition: background-color 150ms ease-in-out;
+}
+.home #work .workList .item1{
+  border-top: solid 1px var(--white-main);
+}
+.home #work .workList .item .workName{
+  color: var(--white-main);
+  transition: color 150ms ease-in-out;
+}
+.home #work .workList .item .level{
+  font-family: var(--font-code);
+  font-size: 30px;
+  line-height: 1;
+}
+.home #work .workList .item:hover{
+  background-color: var(--hover-2);
+}
+.home #work .workList .item:hover .level {
+  animation: rotateArrow 400ms ease-in-out forwards;
+  color: var(--hover);
+}
+.home #work .workList .item:hover .workName {
+  color: var(--hover);
+}
+.home #work .workList .item:not(:hover) .level {
+  animation: rotateArrowReverse 400ms ease-in-out forwards;
+}
+
+@keyframes rotateArrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(300deg);
+  }
+}
+
+@keyframes rotateArrowReverse {
+  0% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.home #work .workList .item .workName{
+  font-family: var(--font-code);
+  font-size: 30px;
+  line-height: 1;
+}
+
+@media (min-width: 480px) {
+  .home .body .bodTxt{
+    margin: 0 30px;
+  }
+}
+@media (min-width: 768px) {
+  .home .body{
+  }
+  .home .body .bodTxt p {
+    width: 60%;
+  }
+}
+
+/*Footer Styles*/
+#footer {
+  width: 100%;
+  background-color: transparent;
+  height: 200px;
+  margin-top: 6em;
+}
+#footer .footerContent{
+  max-width: 480px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#footer .footerContent .footerNav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#footer .footerContent .footerNav .nav-links{
+  
+}
+@media (min-width: 768px) {
+  #footer .footerContent{
+    max-width: 1280px;
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
