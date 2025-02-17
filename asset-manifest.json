@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.17e224e1.css",
-    "main.js": "/my-portfolio/static/js/main.6cbb3b41.js",
+    "main.css": "/my-portfolio/static/css/main.e43d7f42.css",
+    "main.js": "/my-portfolio/static/js/main.1255ec3d.js",
     "static/media/bible_burst.png": "/my-portfolio/static/media/bible_burst.ee4efb1854c101c5c525.png",
+    "static/media/doxaathletic.com.png": "/my-portfolio/static/media/doxaathletic.com.a85196f483b1da0bc935.png",
+    "static/media/www.wards.com_.png": "/my-portfolio/static/media/www.wards.com_.c365960fbd34d8ed3d07.png",
     "static/media/bb_dashboard-2.png": "/my-portfolio/static/media/bb_dashboard-2.3b69cdad09637be0326c.png",
+    "static/media/doxaathletic.com_collections_tops.png": "/my-portfolio/static/media/doxaathletic.com_collections_tops.ae3f2ea8feebee247559.png",
+    "static/media/MW-popup.png": "/my-portfolio/static/media/MW-popup.80458cc92642662532ea.png",
+    "static/media/HourHero.png": "/my-portfolio/static/media/HourHero.3cc1fb6c5796eabdbace.png",
     "index.html": "/my-portfolio/index.html",
-    "main.17e224e1.css.map": "/my-portfolio/static/css/main.17e224e1.css.map",
-    "main.6cbb3b41.js.map": "/my-portfolio/static/js/main.6cbb3b41.js.map"
+    "main.e43d7f42.css.map": "/my-portfolio/static/css/main.e43d7f42.css.map",
+    "main.1255ec3d.js.map": "/my-portfolio/static/js/main.1255ec3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.17e224e1.css",
-    "static/js/main.6cbb3b41.js"
+    "static/css/main.e43d7f42.css",
+    "static/js/main.1255ec3d.js"
   ]
 }
