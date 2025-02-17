@@ -16,7 +16,7 @@ function Home() {
 
           <div className='txt'>
             <h1>Frontend <br />&nbsp;Developer</h1>
-            <a className='resumeSpot' href='/Jonathan Cifonie Resume 1:1:25 v2.pdf' download="Jonathan_Cifonie_Resume.pdf">
+            <a className='resumeSpot' href='https://jtcifonie.github.io/my_resume.pdf' download="my_resume.pdf">
               <div className='resumeSpotContent'>
                 <span className='resumeTxt'>
                   check out <br />my resume here...<br />//
@@ -64,24 +64,22 @@ function Home() {
 
             <div className='workList'>
 
-             
-              <RouterLink to="/Project_1" className='item item1'>
+              <RouterLink to="/Project_2" className='item'>
                 <span className='level'>></span>
                 <span className='workName'>Colony Brands</span>
               </RouterLink>
-             
 
-              <RouterLink to="/about" className='item'>
+              <RouterLink to="/Project_1" className='item item1'>
                 <span className='level'>></span>
                 <span className='workName'>Bible Bursts</span>
               </RouterLink>
 
-              <RouterLink to="/about" className='item'>
+              <RouterLink to="/Project_3" className='item'>
                 <span className='level'>></span>
                 <span className='workName'>HourHero</span>
               </RouterLink>
 
-              <RouterLink to="/about" className='item'>
+              <RouterLink to="/Project_4" className='item'>
                 <span className='level'>></span>
                 <span className='workName'>Doxa</span>
               </RouterLink>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import gitHubLogo from './github-mark.png';
-
+import gitHubLogo from './github-mark.png';import { Link as ScrollLink } from 'react-scroll'; // Smooth scrolling
+import { Link as RouterLink } from 'react-router-dom'; // Page navigation
 function Footer() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,11 +14,11 @@ function Footer() {
         <div className='column column1'>
           <nav className="footerNav">
             <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
-              <li><a href="/">Home</a><span className='arrow'>></span></li>
-              <li><a href="/about">About</a><span className='arrow'>></span></li>
-              <li><a href="/contact">Contact</a><span className='arrow'>></span></li>
+              <li><ScrollLink to="about" smooth={true} duration={500}>About</ScrollLink><span className='arrow'>></span></li>
+              <li><ScrollLink to="skills" smooth={true} duration={500}>Skills</ScrollLink><span className='arrow'>></span></li>
+              <li><ScrollLink to="work" smooth={true} duration={500}>Work</ScrollLink><span className='arrow'>></span></li>
               <li><a href="https://www.linkedin.com/in/jonathantcifonie/" target="_blank">LinkedIn</a><span className='arrow'>></span></li>
-              <li><a href="https://github.com/Xnihilo7" target="_blank">GitHub</a><span className='arrow'>></span></li>
+              <li><a href="https://github.com/jtcifonie" target="_blank">GitHub</a><span className='arrow'>></span></li>
             </ul>
           </nav>
         </div>
