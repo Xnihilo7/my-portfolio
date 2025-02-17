@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 
 const CustomCursor = () => {
   useEffect(() => {
+    // Only activate cursor if screen width is greater than 768px
+    if (window.innerWidth < 768) return;
+
     const cursorDot = document.createElement('div');
     const cursorRing = document.createElement('div');
 
@@ -11,19 +14,19 @@ const CustomCursor = () => {
     cursorDot.style.width = '6px';
     cursorDot.style.height = '6px';
     cursorDot.style.backgroundColor = 'var(--white-main)'; 
-    cursorDot.style.boxShadow = '0 0 0 2px var(--black-main)'; // Outer shadow to act as border
+    cursorDot.style.boxShadow = '0 0 0 2px var(--black-main)';
     cursorDot.style.borderRadius = '50%';
     cursorDot.style.pointerEvents = 'none';
     cursorDot.style.zIndex = '10000';
     cursorDot.style.transform = 'translate(-50%, -50%)';
 
-    // Style the ring with an additional outer shadow for visibility
+    // Style the ring
     cursorRing.id = 'customCursorRing';
     cursorRing.style.position = 'fixed';
     cursorRing.style.width = '40px';
     cursorRing.style.height = '40px';
-    cursorRing.style.border = '2px solid var(--white-main)';  // Inner border
-    cursorRing.style.boxShadow = '0 0 0 2px var(--black-main)'; // Outer shadow to act as border
+    cursorRing.style.border = '2px solid var(--white-main)';
+    cursorRing.style.boxShadow = '0 0 0 2px var(--black-main)';
     cursorRing.style.borderRadius = '50%';
     cursorRing.style.pointerEvents = 'none';
     cursorRing.style.zIndex = '9999';
@@ -33,18 +36,9 @@ const CustomCursor = () => {
     const style = document.createElement('style');
     style.textContent = `
       @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 2px var(--white-main);
-          border-color:var(--white-main);
-        }
-        50% {
-          box-shadow: 0 0 0 10px var(--white-main);
-          border-color:var(--white-main);
-        }
-        100% {
-          box-shadow: 0 0 0 2px var(--white-main);
-          border-color:var(--white-main);
-        }
+        0% { box-shadow: 0 0 0 2px var(--white-main); }
+        50% { box-shadow: 0 0 0 10px var(--white-main); }
+        100% { box-shadow: 0 0 0 2px var(--white-main); }
       }
       #customCursorRing.pulse {
         animation: pulse 0.2s ease-out;
@@ -55,11 +49,7 @@ const CustomCursor = () => {
     document.body.appendChild(cursorDot);
     document.body.appendChild(cursorRing);
 
-    let dotX = 0,
-      dotY = 0,
-      ringX = 0,
-      ringY = 0;
-
+    let dotX = 0, dotY = 0, ringX = 0, ringY = 0;
     const speed = 0.1; // Speed for the ring lag effect
 
     const moveCursor = (event) => {
@@ -86,10 +76,9 @@ const CustomCursor = () => {
     // Handle click event for pulse effect
     const handleClick = () => {
       cursorRing.classList.add('pulse');
-      // Remove class after animation ends to prevent stacking animations
       setTimeout(() => {
         cursorRing.classList.remove('pulse');
-      }, 500); // Match this with the animation duration
+      }, 500);
     };
 
     document.addEventListener('click', handleClick);

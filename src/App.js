@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import NavBar from './pages/NavBar';
 import Footer from './pages/Footer';
 import CustomCursor from './pages/CustomCursor';
+import Project_1 from './pages/Project_1';
 
 import './App.css';
 
@@ -19,8 +20,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Project_1" element={<Project_1 />} />
         </Routes>
-        <Home />
         <Footer />
       </div>
     </Router>

@@ -1,5 +1,6 @@
 import React from 'react';
-import downloadPic from './downloadPic.svg';
+
+import { Link as RouterLink } from 'react-router-dom';
 
 function Home() {
   return (
@@ -21,7 +22,7 @@ function Home() {
                   check out <br />my resume here...<br />//
                 </span>
                 <svg className='downLoad'>
-                  <path d={downloadPic} fill="var(--white-main)" />
+                  {/*<path d={downloadPic} fill="var(--white-main)" />*/}
                 </svg>
               </div>
             </a>
@@ -63,25 +64,27 @@ function Home() {
 
             <div className='workList'>
 
-              <div className='item item1'>
+             
+              <RouterLink to="/Project_1" className='item item1'>
                 <span className='level'>></span>
                 <span className='workName'>Colony Brands</span>
-              </div>
+              </RouterLink>
+             
 
-              <div className='item'>
-              <span className='level'>></span>
+              <RouterLink to="/about" className='item'>
+                <span className='level'>></span>
                 <span className='workName'>Bible Bursts</span>
-              </div>
+              </RouterLink>
 
-              <div className='item'>
-              <span className='level'>></span>
+              <RouterLink to="/about" className='item'>
+                <span className='level'>></span>
                 <span className='workName'>HourHero</span>
-              </div>
+              </RouterLink>
 
-              <div className='item'>
-              <span className='level'>></span>
-                <span className='workName'>Doxa Athletic</span>
-              </div>
+              <RouterLink to="/about" className='item'>
+                <span className='level'>></span>
+                <span className='workName'>Doxa</span>
+              </RouterLink>
 
             </div>
            

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import linkedInLogo from './In-White-128@2x.png';
 import gitHubLogo from './github-mark.png';
 
 function Footer() {
