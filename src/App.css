@@ -12,7 +12,7 @@ html, body {
 }
 
 * {
-  cursor: none;
+  /*cursor: none;*/
 }
 
 :root {
@@ -468,6 +468,11 @@ nav ul {
 .home #skills{
   width: 100%;
   margin: 2em auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 30px;
 }
 .home #skills .skillsGrid{
   display: flex;    
@@ -492,11 +497,38 @@ nav ul {
   transition: background-color 2s ease, transform 0.5s ease;
   white-space: nowrap;
 }
+.home #skills .skillsGrid .item{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+.home #skills .skillsGrid .item .title{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+  width: 100%;
+}
+.home #skills .skillsGrid .item .abt{
+  font-family: var(--font-code);
+  font-size: 20%;
+  font-weight: 400;
+  width: 100%;
+  text-align: left;
+  flex-wrap: wrap;
+
+}
 .home #skills .skillsGrid .item:hover{
   color: var(--white-main);
   transform: scale(1.01);
 }
-
+@media (min-width: 768px) {
+  .home #skills .skillsGrid .item{
+    flex-direction: row-reverse;
+  }
+}
 
 .home #work{
   width: 100%;
@@ -509,16 +541,31 @@ nav ul {
   justify-content: center;
   flex-direction: column;
 }
-.home #work .workList .item{
+.home #work .workList .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--white-main);
+  border-bottom: solid 1px var(--white-main);
+  width: 100%;
+}
+.home #work .workList .item .header{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: solid 1px var(--white-main);
   height: 90px;
   padding: 0 10px;
   transition: background-color 150ms ease-in-out;
   text-decoration: none;
+}
+#work .workList .item .project-show{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 .home #work .workList .item1{
   border-top: solid 1px var(--white-main);
@@ -681,13 +728,13 @@ nav ul {
 --------- Project page styles --------*/
 .project-main {
   max-width: 480px;
-  margin: 10em auto;
+  margin: 1em auto;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 4em;
+  gap: 1em;
 }
 .project-main .project-container{
   width: 100%;
