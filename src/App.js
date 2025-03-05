@@ -4,8 +4,7 @@ import ScrollToTop from "./pages/ScrollToTop";
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import NavBar from './pages/NavBar';
-import Footer from './pages/Footer';
+import NavBar2 from './pages/NavBar2';
 import Project_1 from './pages/Project_1';
 import Project_3 from './pages/Project_3';
 import Project_4 from './pages/Project_4';
@@ -18,7 +17,7 @@ function App() {
     <Router>
       <ScrollToTop />
         {/*<CustomCursor />*/}
-        <NavBar />
+        <NavBar2 />
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -28,7 +27,6 @@ function App() {
           <Route path="/Project_3" element={<Project_3 />} />
           <Route path="/Project_4" element={<Project_4 />} />
         </Routes>
-        <Footer />
     </Router>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
+import Footer2 from './Footer2';
 import Project_1 from './Project_1';
 import Project_3 from './Project_3';
 import Project_4 from './Project_4';
@@ -37,9 +38,8 @@ function Home() {
           <a className="resumeSpot" href="my_resume.pdf" download="my_resume.pdf">
             <div className="resumeSpotContent">
               <span className="resumeTxt">
-                check out <br />my resume here...<br />//
+              // download <br />my resume here...<br />
               </span>
-              <svg className="downLoad"></svg>
             </div>
           </a>
         </div>
@@ -151,6 +151,22 @@ function Home() {
           </RouterLink>*/}
         </div>
       </div>
+
+      <div id="contact">
+        <h2><span className="fakeComment">//</span>&nbsp;contact</h2>
+        <div className="content">
+            <a className="email-b contact-b" href="mailto:jcifonie@liberty.edu">
+              //send an email
+            </a>
+
+            <a className="call-b contact-b" href="https://calendly.com/toddcifonie"  target="_blank">
+              //book a call
+            </a>
+        </div>
+
+      </div>
+
+      <Footer2 />
     </div>
   );
 }

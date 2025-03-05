@@ -32,7 +32,7 @@ h1 {
 h2 {
   font-family: var(--font-apple);
   font-weight: 500;
-  font-size: 55px;
+  font-size: clamp(2.5rem, 0.625rem + 9.375vw, 3.438rem);
   line-height: 2;
   display: flex;
   align-items: center;
@@ -46,13 +46,13 @@ h3 {
 p {
   font-family: var(--font-code);
   font-weight: 400;
-  font-size: 18px;
+  font-size: clamp(0.875rem, 0.696rem + 0.893vw, 1.125rem);
   line-height: 1.5;
 }
 .fakeComment {
   font-family: var(--font-code);
   font-weight: 400;
-  font-size: 52px;
+  font-size: clamp(2rem, -0.5rem + 12.5vw, 3.25rem);
   line-height: 1;
 }
 .nav-links a {
@@ -284,6 +284,41 @@ nav ul {
   }
 }
 
+/*nav styles V2*/
+.navbar .nav-buttons {
+  width: max-content;
+  display: flex;
+}
+.navbar .nav-buttons .nav-uls{
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+}
+.navbar .nav-buttons .nav-uls .vanish{
+  display: none;
+}
+.navbar .nav-buttons .nav-uls li a{
+  background-color: var(--white-main);
+  color: var(--black-main);
+  border: 1px solid var(--black-main);
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 200ms;
+}
+.navbar .nav-buttons .nav-uls li a:hover{
+  background-color: var(--black-main);
+  color: var(--white-main);
+}
+@media (min-width:480px) {
+  .navbar .nav-buttons .nav-uls .vanish{
+    display: initial;
+  }
+}
+
 /*App.js styles*/
 .App {
   position: relative;
@@ -358,10 +393,11 @@ nav ul {
 
 .home .hero .resumeSpot{
   width: 300px;
-  height: 100px;
+  height: 80px;
   border: 2px solid var(--white-main);
   position: relative;
   color: var(--white-main);
+  text-decoration: none;
 }
 .home .hero .resumeSpot:hover{
   background-color: var(--white-main);
@@ -369,21 +405,18 @@ nav ul {
   transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 .home .hero .resumeSpot .resumeSpotContent{
-  width: 300px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   text-align: left;
   transform: rotate(0deg);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 30px;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 8px;
+  position: relative;
 }
 .home .hero .resumeSpot .resumeTxt{
   font-family: var(--font-code);
-  font-weight: 400;
-  font-size: 18px;
 }
 .home .hero .resumeSpot .downLoad{
   width: 45px;
@@ -404,30 +437,16 @@ nav ul {
   fill: var(--black-main);
   transition: fill 250ms ease-in-out;
 }
+
 @media (min-width: 480px) {
   .home .hero{
-    padding: 32% 0 16%;
-  }
-  .home .hero .txt{
-    margin: 0 30px;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 0;
+    padding: 22% 0 16%;
   }
   .home .hero .txt h1 {
     font-size: clamp(2.813rem, 1.667rem + 5.729vw, 6.25rem);
   }
   .home .hero .resumeSpot .resumeSpotContent{
-    width: 300px;
-    height: 100px;
-    transform: rotate(270deg);
-    position: absolute;
-    top: 34%;
-    right: -106%;
-  }
-  .home .hero .resumeSpot{
-    width: 100px;
-    height: 300px;
+    
   }
 }
 @media (min-width: 768px) {
@@ -440,6 +459,18 @@ nav ul {
   .home .hero .txt h1 {
     font-size: clamp(5.75rem, 2rem + 7.813vw, 8.25rem);
   } 
+  .home .hero .txt{
+    margin: 0 30px;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0;
+  }
+  .home .hero .resumeSpot{
+    width: clamp(13.75rem, 6.25rem + 15.625vw, 18.75rem);
+    height: clamp(5rem, 3.125rem + 3.906vw, 6.25rem);
+    transform: rotate(270deg);
+    translate: -65px;
+  }
 
 }
 
@@ -492,7 +523,7 @@ nav ul {
   font-family: var(--font-apple);
   color: var(--hover);
   font-weight: 700;
-  font-size: 75px;
+  font-size: clamp(2.5rem, 0.938rem + 7.813vw, 4.688rem);
   line-height: 1;
   transition: background-color 2s ease, transform 0.5s ease;
   white-space: nowrap;
@@ -632,6 +663,50 @@ nav ul {
   }
 }
 
+
+
+#contact {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  padding-bottom: 10em;
+}
+#contact .content{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+#contact .content .contact-b{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--font-code);
+  font-size: 20px;
+  border: 1px solid var(--white-main);
+  padding: 30px 20px;
+  width: 300px;
+  text-decoration: none;
+  color: var(--white-main);
+  transition: 200ms;
+}
+#contact .content .contact-b:hover{
+  background-color: var(--white-main);
+  color: var(--black-main);
+}
+
+@media (min-width: 768px) {
+  #contact {
+    
+  }
+}
+
+
 /*Footer Styles*/
 #footer {
   width: 100%;
@@ -716,7 +791,16 @@ nav ul {
   }
 }
 
-
+#footer-b {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-main);
+  font-family: var(--font-code);
+  font-size: 18px;
+  padding-bottom: 1em;
+}
 
 
 
@@ -913,3 +997,4 @@ nav ul {
     flex-direction: row-reverse;
   }
 }
+
