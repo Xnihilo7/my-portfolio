@@ -46,7 +46,7 @@ function Project_1() {
         <div className='project-second'>
             <div className='d-script'>
                 <h1>Featured Skills</h1>
-                <p>This website is build with vanilla HTML/CSS bust features some of my first function JavScript logic to track study times and log them to a report.</p>
+                <p>This website is built with vanilla HTML and CSS but also features some of my first functional JavaScript logic. It includes a system to track study times and log them into a report, demonstrating my ability to implement basic interactivity and data handling.</p>
                 <span><a className='goTo' href={bbLink} target="_blank" rel="noopener noreferrer">go to site </a><span className='arrow'>></span></span>
             </div>
 

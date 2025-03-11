@@ -12,7 +12,10 @@ function Project_3() {
 
             <div className='d-script'>
                 <h1>HourHero</h1>
-                <p>Sint minim deserunt et aute excepteur cupidatat consectetur aliqua et cupidatat. Nostrud duis eu nisi ad pariatur amet amet labore id magna anim. Occaecat pariatur officia exercitation adipisicing culpa velit ut incididunt nisi esse. Voluptate anim pariatur dolor eu Lorem nostrud et do. Ullamco incididunt officia fugiat do duis amet proident irure. Enim ea ea sit ex.</p>
+                <p>HourHero was one of my capstone class projects, where I designed and built a full-stack web application to track employee hours and generate timecards for different user profiles. I focused on creating an intuitive user interface (UI) and a smooth user experience (UX) to simplify timekeeping and data logging processes. The application featured password-protected user profiles to ensure data security and privacy.
+
+                Although the application is not currently hosted, the provided examples include screenshots and a video walkthrough to demonstrate its functionality and design.
+                </p>
             </div>
 
             <div className='preview'>
@@ -48,7 +51,9 @@ function Project_3() {
         <div className='project-second'>
             <div className='d-script'>
                 <h1>Featured Skills</h1>
-                <p>Reprehenderit veniam aliquip esse labore irure dolore occaecat voluptate consectetur labore irure. Cillum anim enim nostrud Lorem incididunt culpa officia magna. Do incididunt proident do dolore incididunt ad culpa voluptate in anim consectetur exercitation irure duis. Sint esse adipisicing commodo adipisicing laboris sint tempor officia amet adipisicing nisi aliquip culpa fugiat. Ullamco ea nostrud duis cillum quis veniam. Deserunt aliquip aute amet dolor deserunt veniam ullamco est velit ea incididunt laboris aliquip. Nostrud ipsum irure proident id ullamco mollit id nisi et.</p>
+                <p>HourHero was powered by a phpMyAdmin database, storing all data off-site for dynamic retrieval and display. I designed and connected the database, utilizing PHP and SQL for backend development to manage and query data efficiently. The front end was built with HTML, CSS, and JavaScript, incorporating responsive design principles for a seamless experience across different devices. Additionally, I implemented JavaScript to enhance interactivity and streamline user workflows.
+
+</p>
                 <span><a className='goTo' href={ytLink} target="_blank" rel="noopener noreferrer">go to YouTube </a><span className='arrow'>></span></span>
             </div>
 

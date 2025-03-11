@@ -13,7 +13,7 @@ function Project_4() {
 
             <div className='d-script'>
                 <h1>Doxa Athletic Co</h1>
-                <p>Exercitation commodo irure laboris laboris proident. Nisi aliquip non ea ex quis cillum labore nostrud ipsum. Eiusmod laborum labore nulla culpa esse sunt consequat ullamco dolor. Cupidatat sint occaecat elit elit quis sint. Sint commodo aliqua amet duis laboris laboris id amet. Aliquip exercitation irure consectetur aute fugiat commodo veniam fugiat.</p>
+                <p>Doxa Athletic Co. is a website I am currently developing for a gym wear company I started with a friend. Built on Shopify, this site showcases my ability to create and manage an eCommerce storefront using Shopify’s tools. It also serves as a testing ground for various eCommerce practices, including marketing strategies, product management, and content creation. I regularly update the website and experiment with new ideas to optimize performance and user experience.</p>
             </div>
 
             <div className='preview'>
@@ -46,7 +46,7 @@ function Project_4() {
         <div className='project-second'>
             <div className='d-script'>
                 <h1>Featured Skills</h1>
-                <p>Sit ut fugiat occaecat eu. Anim mollit id aute aliqua incididunt tempor culpa reprehenderit ullamco Lorem. Eu incididunt commodo mollit deserunt elit est sit exercitation enim. Laborum aliquip sunt sint aute nisi consectetur quis labore ipsum cillum do laboris ea sit. Amet anim occaecat adipisicing dolore sit do sit in amet do nulla ut. Magna officia dolore fugiat velit tempor culpa qui officia ea cillum. Magna nulla nulla reprehenderit esse dolore ut voluptate veniam.</p>
+                <p>The site is currently built using Shopify's website builder, and I am in the process of learning and implementing Shopify Liquid to develop a custom homepage and product information pages. I have also connected a custom domain and created comprehensive web policies for our brand to ensure customer satisfaction and compliance. This project allows me to refine my skills in UX/UI design, front-end development, and eCommerce management. It’s one of my favorite passion projects, and I continually work on enhancing it.</p>
                 <span><a className='goTo' href={doxaLink} target="_blank" rel="noopener noreferrer">go to site </a><span className='arrow'>></span></span>
             </div>
 

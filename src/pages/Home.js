@@ -5,9 +5,10 @@ import Project_1 from './Project_1';
 import Project_3 from './Project_3';
 import Project_4 from './Project_4';
 import Project_2 from './Project_2';
+import Project_5 from './Project_5';
 
 function clickProject(projectId) {
-  const projects = ['project1', 'project2', 'project3', 'project4'];
+  const projects = ['project1', 'project2', 'project3', 'project4', 'project5'];
 
   projects.forEach((id) => {
     const project = document.getElementById(id);
@@ -49,10 +50,7 @@ function Home() {
         <div className="bodTxt">
           <h2 className="header"><span className="fakeComment"> //</span>&nbsp;hello there</h2>
           <p>
-            I’m a dedicated Web Developer with experience creating front-end solutions for 15+ eCommerce websites.
-            At Colony Brands, I’ve built custom pages with HTML, CSS, JavaScript, and jQuery, implemented A/B testing
-            in Salesforce Marketing Cloud, and streamlined updates through Salesforce Business Manager.
-          </p>
+          I'm Jonathan Cifonie, a frontend developer with 1.5 years of professional eCommerce experience and 4+ years building websites. I specialize in HTML, CSS, and JavaScript. During my time at Colony Brands, I regularly worked on over 15 storefronts using Salesforce Business Manager and handled A/B testing with Interaction Studio and Optimizely. I also have independent experience developing and running Shopify stores.</p>
         </div>
       </div>
 
@@ -62,12 +60,12 @@ function Home() {
         <div className="skillsGrid">
           {[
             { title: "HTML", desc: "Over 4 years of experience using HTML5 \nbetween school and work" },
-            { title: "CSS", desc: "Expert in CSS3, including Flexbox and Grid" },
-            { title: "JavaScript", desc: "Skilled in ES6+, DOM manipulation, and async programming" },
-            { title: "Salesforce", desc: "Experience with Salesforce development and automation" },
-            { title: "Ecommerce", desc: "Knowledge of eCommerce platforms like WooCommerce and Shopify" },
-            { title: "Shopify", desc: "Customization and development of Shopify stores" },
-            { title: "A/B Testing", desc: "Proficient in A/B testing strategies and tools" },
+            { title: "CSS", desc: "Experinced in CSS3, including Flexbox and Animations" },
+            { title: "JavaScript", desc: "Handy with JavaScript DOm manipulations on web pages." },
+            { title: "Salesforce", desc: "Experience with Salesforce tools including Business Manager and Marketing Cloud" },
+            { title: "Ecommerce", desc: "Speicalized in eCommerce both profecialnaly and independantly." },
+            { title: "Shopify", desc: "Well-versed in Shopify store development,\n management, and learning Shopify Liquid." },
+            { title: "A/B Testing", desc: "Proficient in A/B testing with \nInteraction Studio and Optimizely." },
           ].map((skill, index) => (
             <div key={index} className="item" onClick={() => handleClick(index)}>
               <div className="title">{skill.title}</div>
@@ -130,6 +128,17 @@ function Home() {
 
             <div className="project-show" id="project4">
               <Project_4 />
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="header" onClick={() => clickProject('project5')}>
+              <span className="level">></span>
+              <span className="workName">Portfolio</span>
+            </div>
+
+            <div className="project-show" id="project5">
+              <Project_5 />
             </div>
           </div>
 

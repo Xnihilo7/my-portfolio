@@ -105,23 +105,34 @@ a:active {
   }
 }
 /*Nav styles eh*/
+#nav-background {
+  width: 100%;
+  background-color: var(--black-main);
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%) translateY(0); 
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--white-main);
   padding: 0.5rem 1rem;
-  color: #141414;
+  color: var(--black-main);
   border-radius: 40px;
-  position: fixed;
   height: 70px;
   width: 97vw;  /* Ensures it's 90% of the viewport width */
   max-width: 1220px; /* Ensures it never exceeds 1220px */
   transition: transform 0.3s ease-in-out;
-  z-index: 5;
+  position: relative;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(0); /* Combine both transformations */
   box-sizing: border-box;
   border: solid 2px var(--black-main);
 }
