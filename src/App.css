@@ -839,7 +839,7 @@ nav ul {
   flex-direction: column;
 }
 .project-main .d-script{
-  width: 40%;
+  width: 88%;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -885,7 +885,7 @@ nav ul {
   animation: rotateNavArrowReverse 400ms ease-in-out forwards;
 }
 .project-main .preview{
-  width: 60%;
+  width: 88%;
   margin: 30px;
   display: flex;
   justify-content: center;
@@ -990,6 +990,12 @@ nav ul {
   }
   .project-main .project-container{
     flex-direction: row;
+  }
+  .project-main .d-script{
+    width: 40%;
+  }
+  .project-main .preview{
+    width: 60%;
   }
 }
 

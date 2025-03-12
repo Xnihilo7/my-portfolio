@@ -59,13 +59,13 @@ function Home() {
         <h2 className="header"><span className="fakeComment">//</span>&nbsp;skills</h2>
         <div className="skillsGrid">
           {[
-            { title: "HTML", desc: "Over 4 years of experience using HTML5 \nbetween school and work" },
-            { title: "CSS", desc: "Experinced in CSS3, including Flexbox and Animations" },
-            { title: "JavaScript", desc: "Handy with JavaScript DOm manipulations on web pages." },
-            { title: "Salesforce", desc: "Experience with Salesforce tools including Business Manager and Marketing Cloud" },
-            { title: "Ecommerce", desc: "Speicalized in eCommerce both profecialnaly and independantly." },
-            { title: "Shopify", desc: "Well-versed in Shopify store development,\n management, and learning Shopify Liquid." },
-            { title: "A/B Testing", desc: "Proficient in A/B testing with \nInteraction Studio and Optimizely." },
+             { "title": "HTML", "desc": "Over 4 years of experience with HTML5 in academic \nand professional settings." },
+             { "title": "CSS", "desc": "Experienced in CSS3, including Flexbox, \nGrid, and animations." },
+             { "title": "JavaScript", "desc": "Handy with JavaScript, including DOM manipulation \nand dynamic web interactions." },
+             { "title": "Salesforce", "desc": "Proficient in Salesforce tools, including \nBusiness Manager and Marketing Cloud." },
+             { "title": "Ecommerce", "desc": "Specialized in eCommerce development and managment, \nboth professionally and independently." },
+             { "title": "Shopify", "desc": "Well-versed in Shopify store development, management, \nand learning Shopify Liquid." },
+             { "title": "A/B Testing", "desc": "Experienced in A/B testing using \nInteraction Studio and Optimizely." },
           ].map((skill, index) => (
             <div key={index} className="item" onClick={() => handleClick(index)}>
               <div className="title">{skill.title}</div>
@@ -168,7 +168,7 @@ function Home() {
               //send an email
             </a>
 
-            <a className="call-b contact-b" href="https://calendly.com/toddcifonie"  target="_blank">
+            <a className="call-b contact-b" href="https://calendly.com/jcifonie"  target="_blank">
               //book a call
             </a>
         </div>
