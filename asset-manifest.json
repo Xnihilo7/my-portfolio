@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.634cb940.css",
-    "main.js": "/my-portfolio/static/js/main.7a9e085d.js",
+    "main.css": "/my-portfolio/static/css/main.3a3cb9ea.css",
+    "main.js": "/my-portfolio/static/js/main.316c81b3.js",
     "static/media/bible_burst.png": "/my-portfolio/static/media/bible_burst.ee4efb1854c101c5c525.png",
     "static/media/doxaathletic.com.png": "/my-portfolio/static/media/doxaathletic.com.a85196f483b1da0bc935.png",
     "static/media/www.wards.com_.png": "/my-portfolio/static/media/www.wards.com_.c365960fbd34d8ed3d07.png",
@@ -12,11 +12,11 @@
     "static/media/MW-popup.png": "/my-portfolio/static/media/MW-popup.80458cc92642662532ea.png",
     "static/media/HourHero.png": "/my-portfolio/static/media/HourHero.3cc1fb6c5796eabdbace.png",
     "index.html": "/my-portfolio/index.html",
-    "main.634cb940.css.map": "/my-portfolio/static/css/main.634cb940.css.map",
-    "main.7a9e085d.js.map": "/my-portfolio/static/js/main.7a9e085d.js.map"
+    "main.3a3cb9ea.css.map": "/my-portfolio/static/css/main.3a3cb9ea.css.map",
+    "main.316c81b3.js.map": "/my-portfolio/static/js/main.316c81b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.634cb940.css",
-    "static/js/main.7a9e085d.js"
+    "static/css/main.3a3cb9ea.css",
+    "static/js/main.316c81b3.js"
   ]
 }
